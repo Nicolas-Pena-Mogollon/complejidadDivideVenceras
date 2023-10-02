@@ -1,0 +1,40 @@
+.display__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40vw;
+}
+
+.inputform__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textarea__container {
+    position: relative;
+}
+
+.buttons__container {
+    text-align: center;
+    display: flex;
+    gap: 1vw;
+}
+
+/*Mobile*/
+@media (max-width: 700px) {
+    .display__container {
+        width: 88vw;
+    }
+
+    .input__container {
+        width: 38vw;
+    }
+
+    .buttons__container {
+        justify-content: space-between;
+        width: 86vw;
+    }
+}

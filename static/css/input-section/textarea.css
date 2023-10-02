@@ -1,0 +1,32 @@
+.textarea {
+    font-size: 1.5em;
+    resize: none;
+    background-color: var(--cor-de-fundo1);
+    border-radius: 15px;
+    padding: 15px;
+    height: 30vh;
+    width: 37vw;
+    overflow: auto;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.input__container__invalid .textarea {
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
+    border-radius: 7px;
+}
+
+#display__txtArea {
+    height: 40vh;
+}
+
+/*Mobile*/
+@media (max-width: 700px) {
+    .textarea{
+        width: 80vw;
+    }
+}
