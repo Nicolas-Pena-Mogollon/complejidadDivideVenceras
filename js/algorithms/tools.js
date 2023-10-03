@@ -17,7 +17,7 @@ export function stringToNumberArray(string) {
  * @param {number[]} arr - El array de números a ser ordenado.
  * @returns {number[]} - El array ordenado.
  */
-function mergeSort(arr) {
+export function mergeSort(arr) {
     // Si el array tiene 1 elemento o menos, está ordenado por definición
     if (arr.length <= 1) {
         return arr;
@@ -68,7 +68,7 @@ function merge(left, right) {
  * @param {number} target - El número objetivo a buscar.
  * @returns {number} - El índice del elemento si se encuentra, o -1 si no se encuentra.
  */
-function binarySearch(sortedArray, target) {
+export function binarySearch(sortedArray, target) {
     let left = 0;
     let right = sortedArray.length - 1;
 
@@ -76,7 +76,7 @@ function binarySearch(sortedArray, target) {
     while (left <= right) {
         const middle = Math.floor((left + right) / 2);
 
-        if (sortedArray[middle] === target) {
+        if (sortedArray[middle] == target) {
             // Se encontró el elemento, devuelve el índice.
             return middle; 
         } else if (sortedArray[middle] < target) {
@@ -90,19 +90,3 @@ function binarySearch(sortedArray, target) {
     return -1; 
 }
 
-
-const inputString = "8, 4, 1, 7, 3, 2, 5";
-const numericArray = stringToNumberArray(inputString);
-
-const sortedArray = mergeSort(numericArray);
-
-console.log("Array ordenado:", sortedArray);
-
-const targetNumber = 7;
-const index = binarySearch(sortedArray, targetNumber);
-
-if (index !== -1) {
-    console.log(`El número ${targetNumber} fue encontrado en el índice ${index}.`);
-} else {
-    console.log(`El número ${targetNumber} no fue encontrado en el array.`);
-}

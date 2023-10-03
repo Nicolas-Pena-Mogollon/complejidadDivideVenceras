@@ -36,9 +36,10 @@ function validateContent(content) {
 /**
    * Valida si hay números repetidos en un array.
    * @param {number[]} array - Array de números a validar.
+   * @param {Element} textArea - Es elemento padre.
    * @returns {boolean} - Devuelve `true` si no hay números repetidos, de lo contrario, `false`.
    */
-export function validateNumberRepeated(array) {
+export function validateNumberRepeated(array, textArea) {
     const viewedNumbers = new Set();
     var valid = true;
     for (const number of array) {
@@ -57,12 +58,15 @@ export function validateNumberRepeated(array) {
     return valid;
 }
 
+
+
 /**
    * Verifica si un array está ordenado de forma ascendente o descendente.
    * @param {number[]} array - Array de números a verificar.
+   * @param {Element} textArea - Es elemento padre.
    * @returns {boolean} - Devuelve `true` si el array está ordenado, de lo contrario, `false`.
    */
-export function irOrdered(array) {
+export function isOrdered(array, textArea) {
     let isOrderedAscending = true;
     let isOrderedDescending = true;
 
