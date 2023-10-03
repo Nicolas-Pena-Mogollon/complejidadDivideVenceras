@@ -1,3 +1,8 @@
+/**
+   * Valida el contenido de un área de texto.
+   * @param {HTMLTextAreaElement} textArea - Elemento de área de texto a validar.
+   * @returns {boolean} - Devuelve `true` si la validación es exitosa, de lo contrario, `false`.
+   */
 export function validateTextArea(textArea) {
     const content = textArea.value.replace(/\s+/g, '');
     if (textArea.validity['valueMissing']) {
@@ -14,6 +19,12 @@ export function validateTextArea(textArea) {
     return false;
 }
 
+  /**
+   * Valida si el contenido cumple con el formato de números separados por comas.
+   * @private
+   * @param {string} content - Contenido a validar.
+   * @returns {boolean} - Devuelve `true` si el contenido cumple con el formato, de lo contrario, `false`.
+   */
 function validateContent(content) {
     const regex = /^(\d+(\.\d+)?,)*\d+(\.\d+)?$/;
     if (regex.test(content)) {
@@ -22,6 +33,11 @@ function validateContent(content) {
     return false;
 }
 
+/**
+   * Valida si hay números repetidos en un array.
+   * @param {number[]} array - Array de números a validar.
+   * @returns {boolean} - Devuelve `true` si no hay números repetidos, de lo contrario, `false`.
+   */
 export function validateNumberRepeated(array) {
     const viewedNumbers = new Set();
     var valid = true;
@@ -41,6 +57,11 @@ export function validateNumberRepeated(array) {
     return valid;
 }
 
+/**
+   * Verifica si un array está ordenado de forma ascendente o descendente.
+   * @param {number[]} array - Array de números a verificar.
+   * @returns {boolean} - Devuelve `true` si el array está ordenado, de lo contrario, `false`.
+   */
 export function irOrdered(array) {
     let isOrderedAscending = true;
     let isOrderedDescending = true;
@@ -63,6 +84,11 @@ export function irOrdered(array) {
     return isOrderedAscending || isOrderedDescending;
 }
 
+ /**
+   * Valida si el valor de entrada es un número.
+   * @param {HTMLInputElement} input - Elemento de entrada a validar.
+   * @returns {boolean} - Devuelve `true` si el valor de entrada es un número, de lo contrario, `false`.
+   */
 export function isNumber(input) {
     const numberRegex = /^-?\d+(\.\d+)?$/;
     if (numberRegex.test(input.value)) {
