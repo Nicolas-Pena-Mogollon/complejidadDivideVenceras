@@ -19,12 +19,12 @@ export function validateTextArea(textArea) {
     return false;
 }
 
-  /**
-   * Valida si el contenido cumple con el formato de números separados por comas.
-   * @private
-   * @param {string} content - Contenido a validar.
-   * @returns {boolean} - Devuelve `true` si el contenido cumple con el formato, de lo contrario, `false`.
-   */
+/**
+ * Valida si el contenido cumple con el formato de números separados por comas.
+ * @private
+ * @param {string} content - Contenido a validar.
+ * @returns {boolean} - Devuelve `true` si el contenido cumple con el formato, de lo contrario, `false`.
+ */
 function validateContent(content) {
     const regex = /^(\d+(\.\d+)?,)*\d+(\.\d+)?$/;
     if (regex.test(content)) {
@@ -58,8 +58,6 @@ export function validateNumberRepeated(array, textArea) {
     return valid;
 }
 
-
-
 /**
    * Verifica si un array está ordenado de forma ascendente o descendente.
    * @param {number[]} array - Array de números a verificar.
@@ -88,11 +86,11 @@ export function isOrdered(array, textArea) {
     return isOrderedAscending || isOrderedDescending;
 }
 
- /**
-   * Valida si el valor de entrada es un número.
-   * @param {HTMLInputElement} input - Elemento de entrada a validar.
-   * @returns {boolean} - Devuelve `true` si el valor de entrada es un número, de lo contrario, `false`.
-   */
+/**
+  * Valida si el valor de entrada es un número.
+  * @param {HTMLInputElement} input - Elemento de entrada a validar.
+  * @returns {boolean} - Devuelve `true` si el valor de entrada es un número, de lo contrario, `false`.
+  */
 export function isNumber(input) {
     const numberRegex = /^-?\d+(\.\d+)?$/;
     if (numberRegex.test(input.value)) {
