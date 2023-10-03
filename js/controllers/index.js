@@ -25,16 +25,19 @@ binarySearchItem.addEventListener("click", function (e) {
     if (validateTextArea(textarea) && isNumber(numberInput)) {
         const array = stringToNumberArray(textAreaContent);
 
-        
+        /*Valida que no hay números repetidos y que el array está ordenado.*/
         if (validateNumberRepeated(array, textarea) && isOrdered(array, textarea)){
+            // Limpia el contenido del textarea de resultados.
             displayTextarea.value = "";
+            // Obtiene el número objetivo de la entrada.
             const targetNumber = parseFloat(numberInput.value);
+            // Realiza la búsqueda binaria en el array
             const resultBin = binarySearch(array, targetNumber);
-
+            // Muestra el resultado de la búsqueda en el textarea de resultados.
             if (resultBin !== -1) {
                 displayTextarea.value = `El número ${targetNumber} fue encontrado en la posición ${resultBin + 1}.`;
 
-
+            // si no hay resultado muestra esto
             } else {
                 displayTextarea.value = `El número ${targetNumber} no fue encontrado en el array.`;
             }
