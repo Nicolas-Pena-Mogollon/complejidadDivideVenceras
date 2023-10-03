@@ -1,3 +1,7 @@
+/**
+ * Definición de variables personalizadas y estilos generales.
+ */
+
 :root {
     --cor-de-fundo1: white;
     --cor-de-fundo2: #1f1f1f;
@@ -8,6 +12,7 @@
     --warning-color: red;
 }
 
+/* Estilos generales del cuerpo del documento */
 body {
     box-sizing: border-box;
     font-family: 'Raleway';
@@ -15,24 +20,29 @@ body {
     line-height: 1;
 }
 
+/*estilos generales para las secciones. */
 section {
     padding: 4vw 5vw 4vw 5vw;
 }
 
+/* Estilos para enlaces */
 a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
 
+/* Estilos para el textinfo_bold */
 #textinfo__bold{
     font-weight: 500;
     font-size: 20px;
 }
 
+/*Estilos para el marcador de posición en campos de entrada.*/
 ::placeholder {
     color: var();
 }
 
+/*Estilos para el foco en elementos.*/
 :focus {
     outline: none;
 }
@@ -54,7 +64,9 @@ section.principal {
     color: var(--cor-de-texto1);
 }
 
-/*Mobile*/
+/**
+ * CSS para pantallas con maximo de 700px
+*/
 @media (max-width: 700px) {
     section.principal {
         flex-direction: column;

@@ -1,3 +1,6 @@
+/**
+CSS para estilos de los contenedores
+*/
 .display__container {
     display: flex;
     flex-direction: column;
@@ -6,17 +9,19 @@
     gap: 10px;
     width: 40vw;
 }
-
+/*Estilo para el form del container*/
 .inputform__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/*Estilo para el container del textarea*/
 .textarea__container {
     position: relative;
 }
 
+/*estilo para el container del button*/
 .buttons__container {
     text-align: center;
     display: flex;
@@ -33,7 +38,9 @@
     gap: 1vw;
 }
 
-/*Mobile*/
+/**
+ * CSS para pantallas con maximo de 360px
+*/
 @media (max-width: 700px) {
     .display__container {
         width: 88vw;

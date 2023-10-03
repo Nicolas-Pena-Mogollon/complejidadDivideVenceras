@@ -1,3 +1,5 @@
+/* Estilos generales del área de texto */
+
 .textarea {
     font-size: 1.5em;
     resize: none;
@@ -10,21 +12,26 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/*Estilo para textarea con foco*/
 .textarea:focus {
     outline: none;
 }
 
+/*Estilos para elementos de clase ".textarea" para contenedores inválidos de clase*/
 .input__container__invalid .textarea {
     color: var(--warning-color);
     border: 1px solid var(--warning-color);
     border-radius: 7px;
 }
 
+/*Estilos específicos para el elemento en especial*/
 #display__txtArea {
     height: 45vh;
 }
 
-/*Mobile*/
+/**
+ * CSS para pantallas con maximo de 360px
+*/
 @media (max-width: 700px) {
     .textarea{
         width: 80vw;

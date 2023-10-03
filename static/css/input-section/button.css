@@ -1,3 +1,6 @@
+/**
+ * Estilos para botones.
+*/
 button {
     background-color: var(--cor-de-fundo1);
     font-family: 'Raleway';
@@ -9,15 +12,20 @@ button {
     height: 50px;
 }
 
+/*Estilos al pasar el ratón por encima del botón */
 .buttons button:hover {
     background-color: #cfdcdc;
 }
 
+/* Estilos cuando se hace clic en el botón */
 .buttons button:active {
     background-color: var(--cor-de-fundo1);
     font-size: 18px;
 }
 
+/**
+ * CSS para pantallas con maximo de 360px
+*/
 @media (max-width: 700px) {
     button {
         width: 40vw;
