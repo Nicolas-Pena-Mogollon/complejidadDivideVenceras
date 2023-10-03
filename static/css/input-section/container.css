@@ -23,6 +23,16 @@
     gap: 1vw;
 }
 
+/* Contenedor para el input y el botón de búsqueda */
+.displayform__input__container {
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
 /*Mobile*/
 @media (max-width: 700px) {
     .display__container {
@@ -30,11 +40,12 @@
     }
 
     .input__container {
-        width: 38vw;
+        width: 88vw;
     }
 
     .buttons__container {
         justify-content: space-between;
         width: 86vw;
     }
+
 }

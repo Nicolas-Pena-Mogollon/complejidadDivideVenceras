@@ -1,10 +1,11 @@
-import { validateTextArea, validateNumberRepeated, irOrdered } from "../validators/validators.js";
+import { validateTextArea, isNumber, validateNumberRepeated, irOrdered } from "../validators/validators.js";
 import { stringToNumberArray } from "../algorithms/tools.js";
 
 const textarea = document.querySelector("#input__txtArea");
 const binarySearch = document.querySelector("#binary__search");
 const mergeSort = document.querySelector("#merge__sort");
 const displayTextarea = document.querySelector("#display__txtArea");
+const numberInput = document.querySelector("#number_value");
 
 textarea.addEventListener("blur", function (e) {
     e.preventDefault();
@@ -14,7 +15,7 @@ textarea.addEventListener("blur", function (e) {
 binarySearch.addEventListener("click", function (e) {
     e.preventDefault();
     const textAreaContent = textarea.value.replace(/\s+/g, '');
-    if (validateTextArea(textarea)) {
+    if (validateTextArea(textarea) && isNumber(numberInput)) {
         const array = stringToNumberArray(textAreaContent);
         console.log(array);
         /*  validar si hay numeros repetidos, si está ordenado y realizar la búsqueda, los 

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../static/css/footer.css">
     <link rel="stylesheet" href="../static/css/input-section/button.css">
     <link rel="stylesheet" href="../static/css/input-section/textarea.css">
+    <link rel="stylesheet" href="../static/css/input-section/input.css">
+    <link rel="stylesheet" href="../static/css/input-section/label.css">
     <link rel="stylesheet" href="../static/css/input-section/container.css">
     <link rel="stylesheet" href="../static/css/input-section/error.css">
     <!-- Fonts -->
@@ -43,6 +45,14 @@
                         <textarea class="textarea" id="input__txtArea" placeholder="Ingrese el arreglo aquí"
                             required></textarea>
                         <span class="input__message__error">Este campo no es valido</span>
+                    </div>
+                    <div class="displayform__input__container">
+                        <div class="input__container">
+                            <input class="display__input" id="number_value" type="text" name="number_value"
+                                placeholder="Ingrese el texto" required>
+                            <label class="display__input__label" for="number_value">Ingrese el número</label>
+                            <span class="input__message__error">Este campo no es valido</span>
+                        </div>
                     </div>
                     <div class="buttons__container">
                         <button class="buttons" id="binary__search">Búsqueda Binaria</button>

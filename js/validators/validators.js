@@ -62,3 +62,16 @@ export function irOrdered(array) {
     }
     return isOrderedAscending || isOrderedDescending;
 }
+
+export function isNumber(input) {
+    const numberRegex = /^-?\d+(\.\d+)?$/;
+    if (numberRegex.test(input.value)) {
+        input.parentElement.classList.remove("input__container__invalid");
+        input.parentElement.querySelector(".input__message__error").innerHTML = "";
+        return true;
+    } else {
+        input.parentElement.classList.add("input__container__invalid");
+        input.parentElement.querySelector(".input__message__error").innerHTML = "El valor ingresado no es un número";
+        return false;
+    }
+}
